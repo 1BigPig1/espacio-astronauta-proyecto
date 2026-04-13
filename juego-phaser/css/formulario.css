@@ -5,7 +5,7 @@ html, body {
 }
 
 
-body{
+.classBody{
 
     margin: 0;
     padding:0;
@@ -72,12 +72,11 @@ a{
     left: 50%;
     transform: translateX(-50%);
     white-space: nowrap;
-
     color: rgb(223, 226, 43);
     font-weight: 900;
     font-family: 'StarWars', sans-serif;
     letter-spacing: 5px;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 
@@ -125,4 +124,49 @@ a{
     border: 1px solid #cccccc2c;
     font-size: 16px;
     background-color: #cccccc2c;
+    display: block;          /* Se comporta como un bloque (ocupa su propia línea) */
+    width: 250px;           /* Un ancho fijo para que todos midan lo mismo */
+    margin: 0 auto;         /* Los centra horizontalmente dentro de su div */
+
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menuA:hover {
+    background-color: rgb(223, 226, 43);
+    color: black;
+    box-shadow: 0 0 15px rgb(223, 226, 43);
+    
+    
+    animation-play-state: paused !important;
+    transform: scale(1.05) !important;
+}
+
+.SepBotonesMenu {
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+
+
+
+/* Asignamos animaciones desfasadas a cada botón según su orden en el menú */
+.divPadre > .SepBotonesMenu:nth-child(2) .menuA { animation: flotarBtn1 12s infinite ease-in-out alternate; }
+.divPadre > .SepBotonesMenu:nth-child(3) .menuA { animation: flotarBtn2 15s infinite ease-in-out alternate; animation-delay: 1s; }
+.divPadre > .SepBotonesMenu:nth-child(4) .menuA { animation: flotarBtn1 14s infinite ease-in-out alternate; animation-delay: 2s; }
+.divPadre > .SepBotonesMenu:nth-child(5) .menuA { animation: flotarBtn2 13s infinite ease-in-out alternate; animation-delay: 0.5s; }
+.divPadre > .SepBotonesMenu:nth-child(6) .menuA { animation: flotarBtn1 16s infinite ease-in-out alternate; animation-delay: 1.5s; }
+.divPadre > .SepBotonesMenu:nth-child(7) .menuA { animation: flotarBtn2 14s infinite ease-in-out alternate; animation-delay: 2.5s; }
+
+/* TRAYECTORIA BOTONES 1: Movimiento muy corto en diagonal */
+@keyframes flotarBtn1 {
+    0%   { transform: translate(0px, 0px) rotate(0deg); }
+    50%  { transform: translate(3px, -4px) rotate(1deg); }
+    100% { transform: translate(-2px, 3px) rotate(-1deg); }
+}
+
+/* TRAYECTORIA BOTONES 2: Movimiento muy corto opuesto */
+@keyframes flotarBtn2 {
+    0%   { transform: translate(0px, 0px) rotate(0deg); }
+    50%  { transform: translate(-4px, 2px) rotate(-1deg); }
+    100% { transform: translate(3px, -2px) rotate(1deg); }
 }
