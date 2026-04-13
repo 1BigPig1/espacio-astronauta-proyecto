@@ -1,0 +1,128 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+body{
+
+    margin: 0;
+    padding:0;
+    background-image: url('../fotos/fondoMenu2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.divPadre{
+
+    position: relative;
+
+}
+
+.divHijo{
+
+    color: rgb(223, 226, 43);
+    font-size: large;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: 'StarWars', sans-serif;
+    letter-spacing: 5px;
+                                                
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #cccccc2c;
+    font-size:16px;
+    transition:0.3s;
+    background-color: #cccccc2c;
+}
+
+input:focus{
+    border-color:rgb(223, 226, 43);
+    outline:none;
+    box-shadow:0 0 5px rgb(223, 226, 43);
+}
+
+
+
+@font-face {
+    font-family: "StarWars";
+    src: url("../fonts/Starjout.ttf");
+}
+
+
+
+a{
+    color: rgb(223, 226, 43);
+}
+
+
+.titulo{
+    position: absolute;
+    top: -180px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+
+    color: rgb(223, 226, 43);
+    font-weight: 900;
+    font-family: 'StarWars', sans-serif;
+    letter-spacing: 5px;
+    font-size: 40px;
+}
+
+
+.titulo span {
+    display: inline-block;
+}
+
+.titulo span:nth-child(1) { animation: flotar1 14s infinite ease-in-out alternate; animation-delay: 0.1s; }
+.titulo span:nth-child(2) { animation: flotar2 12s infinite ease-in-out alternate; animation-delay: 0.8s; }
+.titulo span:nth-child(3) { animation: flotar3 16s infinite ease-in-out alternate; animation-delay: 0.3s; }
+.titulo span:nth-child(4) { animation: flotar1 13s infinite ease-in-out alternate; animation-delay: 1.2s; }
+.titulo span:nth-child(5) { animation: flotar2 15s infinite ease-in-out alternate; animation-delay: 0.5s; }
+.titulo span:nth-child(6) { animation: flotar3 12s infinite ease-in-out alternate; animation-delay: 1.5s; }
+.titulo span:nth-child(7) { animation: flotar1 17s infinite ease-in-out alternate; animation-delay: 0.7s; }
+.titulo span:nth-child(8) { animation: flotar2 14s infinite ease-in-out alternate; animation-delay: 1.1s; }
+.titulo span:nth-child(9) { animation: flotar3 13s infinite ease-in-out alternate; animation-delay: 0.2s; }
+.titulo span:nth-child(10) { animation: flotar1 15s infinite ease-in-out alternate; animation-delay: 0.9s; }
+
+@keyframes flotar1 {
+    0%   { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+    33%  { transform: translate(-5px, -15px) rotate(4deg) scale(1.05); }
+    66%  { transform: translate(6px, 10px) rotate(-3deg) scale(0.95); }
+    100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+}
+
+@keyframes flotar2 {
+    0%   { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+    33%  { transform: translate(12px, -5px) rotate(-6deg) scale(0.95); }
+    66%  { transform: translate(-10px, 5px) rotate(5deg) scale(1.02); }
+    100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+}
+
+@keyframes flotar3 {
+    0%   { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+    33%  { transform: translate(-8px, 12px) rotate(8deg) scale(0.9); }
+    66%  { transform: translate(8px, -12px) rotate(-7deg) scale(1.08); }
+    100% { transform: translate(0px, 0px) rotate(0deg) scale(1); }
+}
+
+.menuA{
+    text-decoration: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 8px;
+    border: 1px solid #cccccc2c;
+    font-size: 16px;
+    background-color: #cccccc2c;
+}
