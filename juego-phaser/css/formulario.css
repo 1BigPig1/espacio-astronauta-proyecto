@@ -4,12 +4,29 @@ html, body {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 
 .classBody{
 
     margin: 0;
     padding:0;
     background-image: url('../fotos/fondoMenu2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.classBody2{
+
+    margin: 0;
+    padding:0;
+    background-image: url('../fotos/fondoMenu3.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -52,7 +69,9 @@ input:focus{
     box-shadow:0 0 5px rgb(223, 226, 43);
 }
 
-
+.tituloDiv{
+    display: flex; justify-content: center; width: 100%;
+}
 
 @font-face {
     font-family: "StarWars";
@@ -64,6 +83,31 @@ input:focus{
 a{
     color: rgb(223, 226, 43);
 }
+
+button{
+    width:100%;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #cccccc2c;
+    font-size:16px;
+    transition:0.3s;
+    background-color: #cccccc2c;
+    margin-top: 30px;
+    color:rgb(169, 169, 169) ;
+}
+
+button:hover{
+    border-color:rgb(223, 226, 43);
+    outline:none;
+    box-shadow:0 0 5px rgb(223, 226, 43);
+}
+
+button:focus{
+    border-color:rgb(226, 110, 43);
+    outline:none;
+    box-shadow:0 0 5px rgb(226, 110, 43);
+}
+
 
 
 .titulo{
@@ -124,9 +168,9 @@ a{
     border: 1px solid #cccccc2c;
     font-size: 16px;
     background-color: #cccccc2c;
-    display: block;          /* Se comporta como un bloque (ocupa su propia línea) */
-    width: 250px;           /* Un ancho fijo para que todos midan lo mismo */
-    margin: 0 auto;         /* Los centra horizontalmente dentro de su div */
+    display: block;
+    width: 250px;
+    margin: 0 auto;
 
     transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -147,9 +191,6 @@ a{
 }
 
 
-
-
-/* Asignamos animaciones desfasadas a cada botón según su orden en el menú */
 .divPadre > .SepBotonesMenu:nth-child(2) .menuA { animation: flotarBtn1 12s infinite ease-in-out alternate; }
 .divPadre > .SepBotonesMenu:nth-child(3) .menuA { animation: flotarBtn2 15s infinite ease-in-out alternate; animation-delay: 1s; }
 .divPadre > .SepBotonesMenu:nth-child(4) .menuA { animation: flotarBtn1 14s infinite ease-in-out alternate; animation-delay: 2s; }
@@ -157,14 +198,14 @@ a{
 .divPadre > .SepBotonesMenu:nth-child(6) .menuA { animation: flotarBtn1 16s infinite ease-in-out alternate; animation-delay: 1.5s; }
 .divPadre > .SepBotonesMenu:nth-child(7) .menuA { animation: flotarBtn2 14s infinite ease-in-out alternate; animation-delay: 2.5s; }
 
-/* TRAYECTORIA BOTONES 1: Movimiento muy corto en diagonal */
+
 @keyframes flotarBtn1 {
     0%   { transform: translate(0px, 0px) rotate(0deg); }
     50%  { transform: translate(3px, -4px) rotate(1deg); }
     100% { transform: translate(-2px, 3px) rotate(-1deg); }
 }
 
-/* TRAYECTORIA BOTONES 2: Movimiento muy corto opuesto */
+
 @keyframes flotarBtn2 {
     0%   { transform: translate(0px, 0px) rotate(0deg); }
     50%  { transform: translate(-4px, 2px) rotate(-1deg); }
